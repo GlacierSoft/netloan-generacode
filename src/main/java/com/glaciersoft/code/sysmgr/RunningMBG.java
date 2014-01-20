@@ -16,6 +16,7 @@ public class RunningMBG {
     
     public static String runXMLAUTHORITY = "sysmgr/generacode.xml";
     
+    
 	public static void main(String[] args) {
 		try {
 			List<String> warnings = new ArrayList<String>();
