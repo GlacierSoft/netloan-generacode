@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<properties resource="sysmgr/generacode.properties" />
+	<!-- classPathEntry:数据库的JDBC驱动,换成你自己的驱动位置 -->
+	<classPathEntry location="${jdbcHome}" />
+	<context id="MBG" targetRuntime="MyBatis3" defaultModelType="conditional">
+		<plugin type="com.glaciersoft.code.plugin.PaginationPlugin"></plugin>
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.MapperConfigPlugin">
+			<property name="fileName" value="mybatis-config.xml" />
+			<property name="targetPackage" value="${mapperConfigPackage}" />
+			<property name="targetProject" value="${targetProject}" />
+		</plugin>
+
+		<commentGenerator>
+			<!-- 去除自动生成的注释 -->
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionURL}" userId="${userId}" password="${password}">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- targetProject:自动生成代码的位置 -->
+		<javaModelGenerator targetPackage="${modelPackage}" targetProject="${targetProject}">
+			<property name="enableSubPackages" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="${sqlMapperPackage}" targetProject="${targetProject}">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="${daoMapperPackage}" targetProject="${targetProject}">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+
+		<table tableName="t_user" domainObjectName="User" alias="temp_user"/>
+		
+		<table tableName="t_user_setting" domainObjectName="UserSetting" alias="temp_user_setting"/>
+
+		<table tableName="t_user_role" domainObjectName="UserRole" alias="temp_user_role"/>
+
+		<table tableName="t_role" domainObjectName="Role" alias="temp_role"/>
+
+		<table tableName="t_menu" domainObjectName="Menu" alias="temp_menu"/>
+		
+		<table tableName="t_panel" domainObjectName="Panel" alias="temp_panel"/>
+		
+		<table tableName="t_action" domainObjectName="Action" alias="temp_action"/>
+
+		<table tableName="t_authority" domainObjectName="Authority" alias="temp_auth"/>
+		
+		<table tableName="t_operalog" domainObjectName="OperaLog" alias="temp_operalog"/>
+
+		<table tableName="t_loginlog" domainObjectName="LoginLog" alias="temp_loginlog"/>
+	</context>
+</generatorConfiguration>  
