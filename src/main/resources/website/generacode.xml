@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<properties resource="website/generacode.properties" />
+	<!-- classPathEntry:数据库的JDBC驱动,换成你自己的驱动位置 -->
+	<classPathEntry location="${jdbcHome}" />
+	<context id="MBG" targetRuntime="MyBatis3" defaultModelType="conditional">
+		<plugin type="com.glaciersoft.code.plugin.PaginationPlugin"></plugin>
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.MapperConfigPlugin">
+			<property name="fileName" value="mybatis-config.xml" />
+			<property name="targetPackage" value="${mapperConfigPackage}" />
+			<property name="targetProject" value="${targetProject}" />
+		</plugin>
+
+		<commentGenerator>
+			<!-- 去除自动生成的注释 -->
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionURL}" userId="${userId}" password="${password}">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- targetProject:自动生成代码的位置 -->
+		<javaModelGenerator targetPackage="${modelPackage}" targetProject="${targetProject}">
+			<property name="enableSubPackages" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="${sqlMapperPackage}" targetProject="${targetProject}">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="${daoMapperPackage}" targetProject="${targetProject}">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		
+		<table tableName="t_website_advertisement" domainObjectName="WebsiteAdvertisement" alias="temp_website_advertisement"/>
+		<table tableName="t_website_announcement" domainObjectName="WebsiteAnnouncement" alias="temp_website_announcement"/>
+		<table tableName="t_website_help" domainObjectName="WebsiteHelp" alias="temp_website_help"/>
+		<table tableName="t_website_hiring" domainObjectName="WebsiteHiring" alias="temp_website_hiring"/>
+		<table tableName="t_website_link" domainObjectName="WebsiteLink" alias="temp_website_link"/>
+		<table tableName="t_website_nav" domainObjectName="WebsiteNav" alias="temp_website_nav"/>
+		<table tableName="t_website_news" domainObjectName="WebsiteNews" alias="temp_website_news"/>
+		<table tableName="t_website_service" domainObjectName="WebsiteService" alias="temp_website_service"/>
+
+	</context>
+</generatorConfiguration>  
