@@ -43,13 +43,12 @@
 		</javaClientGenerator>
 
 
-		<table tableName="t_website_nav" domainObjectName="WebsiteNav" alias="temp_website_nav"/>
 		<!-- <table tableName="t_parameter_area" domainObjectName="ParameterArea" alias="temp_parameter_area"/>
 		<table tableName="t_parameter_credit" domainObjectName="ParameterCredit" alias="temp_parameter_credit"/>
 		<table tableName="t_parameter_integral" domainObjectName="ParameterIntegral" alias="temp_parameter_integral"/>
 		<table tableName="t_parameter_optgroup" domainObjectName="ParameterOptgroup" alias="temp_parameter_optgroup"/>
 		<table tableName="t_parameter_optgroup_value" domainObjectName="ParameterOptgroupValue" alias="temp_parameter_optgroup_value"/> -->
-		
+		<table tableName="t_parameter_system_variables" domainObjectName="ParameterSystemVariables" alias="temp_parameter_system_variables"/>
 
 	</context>
 </generatorConfiguration>  
