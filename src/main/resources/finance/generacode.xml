@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-	<properties resource="member/generacode.properties" />
+	<properties resource="finance/generacode.properties" />
 	<!-- classPathEntry:数据库的JDBC驱动,换成你自己的驱动位置 -->
 	<classPathEntry location="${jdbcHome}" />
 	<context id="MBG" targetRuntime="MyBatis3" defaultModelType="conditional">
@@ -43,15 +43,11 @@
 		</javaClientGenerator>
 
 
-		<table tableName="t_member" domainObjectName="Member" alias="temp_member"/>
-		<table tableName="t_member_apply_amount" domainObjectName="MemberApplyAmount" alias="temp_member_apply_amount"/>
-		<table tableName="t_member_auth" domainObjectName="MemberAuth" alias="temp_member_auth"/>
-		<table tableName="t_member_credit_integral" domainObjectName="MemberCreditIntegral" alias="temp_member_credit_integral"/>
-		<table tableName="t_member_estate" domainObjectName="MemberEstate" alias="temp_member_estate"/>
-		<table tableName="t_member_finance" domainObjectName="MemberFinance" alias="temp_member_finance"/>
-		<table tableName="t_member_integral" domainObjectName="MemberIntegral" alias="temp_member_integral"/>
-		<table tableName="t_member_statistics" domainObjectName="MemberStatistics" alias="temp_member_statistics"/>
-		<table tableName="t_member_vip" domainObjectName="MemberVip" alias="temp_member_vip"/>
-		<table tableName="t_member_work" domainObjectName="MemberWork" alias="temp_member_work"/>
+		<table tableName="t_finance_bank_card" domainObjectName="FinanceBankCard" alias="temp_finance_bank_card"/>
+		<table tableName="t_finance_member" domainObjectName="FinanceMember" alias="temp_finance_member"/>
+		<table tableName="t_finance_recharge" domainObjectName="FinanceRecharge" alias="temp_finance_recharge"/>
+		<table tableName="t_finance_recharge_set" domainObjectName="FinanceRechargeSet" alias="temp_finance_recharge_set"/>
+		<table tableName="t_finance_transaction" domainObjectName="FinanceTransaction" alias="temp_finance_transaction"/>
+		<table tableName="t_finance_withdraw" domainObjectName="FinanceWithdraw" alias="temp_finance_withdraw"/>
 	</context>
 </generatorConfiguration>  
