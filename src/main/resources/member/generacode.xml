@@ -51,6 +51,7 @@
 		<table tableName="t_member_finance" domainObjectName="MemberFinance" alias="temp_member_finance"/>
 		<table tableName="t_member_integral" domainObjectName="MemberIntegral" alias="temp_member_integral"/>
 		<table tableName="t_member_statistics" domainObjectName="MemberStatistics" alias="temp_member_statistics"/>
+		<table tableName="t_member_token" domainObjectName="MemberToken" alias="temp_member_token"/>
 		<table tableName="t_member_vip" domainObjectName="MemberVip" alias="temp_member_vip"/>
 		<table tableName="t_member_work" domainObjectName="MemberWork" alias="temp_member_work"/>
 	</context>
