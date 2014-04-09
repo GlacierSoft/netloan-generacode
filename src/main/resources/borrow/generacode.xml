@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<properties resource="borrow/generacode.properties" />
+	<!-- classPathEntry:数据库的JDBC驱动,换成你自己的驱动位置 -->
+	<classPathEntry location="${jdbcHome}" />
+	<context id="MBG" targetRuntime="MyBatis3" defaultModelType="conditional">
+		<plugin type="com.glaciersoft.code.plugin.PaginationPlugin"></plugin>
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.MapperConfigPlugin">
+			<property name="fileName" value="mybatis-config.xml" />
+			<property name="targetPackage" value="${mapperConfigPackage}" />
+			<property name="targetProject" value="${targetProject}" />
+		</plugin>
+
+		<commentGenerator>
+			<!-- 去除自动生成的注释 -->
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionURL}" userId="${userId}" password="${password}">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- targetProject:自动生成代码的位置 -->
+		<javaModelGenerator targetPackage="${modelPackage}" targetProject="${targetProject}">
+			<property name="enableSubPackages" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="${sqlMapperPackage}" targetProject="${targetProject}">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="${daoMapperPackage}" targetProject="${targetProject}">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+
+		<table tableName="t_borrowing_loan" domainObjectName="BorrowingLoan" alias="temp_borrowing_loan"/>
+		<table tableName="t_loan_review" domainObjectName="LoanReview" alias="temp_loan_review"/>
+		<table tableName="t_loan_tender" domainObjectName="LoanTender" alias="temp_loan_tender"/>
+		<table tableName="t_overdue_notes" domainObjectName="OverdueNotes" alias="temp_overdue_notes"/>
+		<table tableName="t_receivables_notes" domainObjectName="ReceivablesNotes" alias="temp_receivables_notes"/>
+		<table tableName="t_receivables_notes_detail" domainObjectName="ReceivablesNotesDetail" alias="temp_receivables_notes_detail"/>
+		<table tableName="t_repayment_notes" domainObjectName="RepaymentNotes" alias="temp_repayment_notes"/>
+		<table tableName="t_repayment_notes_detail" domainObjectName="RepaymentNotesDetail" alias="temp_repayment_notes_detail"/>
+		<table tableName="t_repayment_type" domainObjectName="RepaymentType" alias="temp_repayment_type"/>
+		<table tableName="t_tender_notes" domainObjectName="TenderNotes" alias="temp_tender_notes"/>
+		<table tableName="t_tender_repayment" domainObjectName="TenderRepayment" alias="temp_tender_repayment"/>
+	</context>
+</generatorConfiguration>  
