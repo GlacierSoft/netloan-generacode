@@ -55,5 +55,6 @@
 		<table tableName="t_member_vip" domainObjectName="MemberVip" alias="temp_member_vip"/>
 		<table tableName="t_member_work" domainObjectName="MemberWork" alias="temp_member_work"/> 
 		<table tableName="t_member_message_notice" domainObjectName="MemberMessageNotice" alias="temp_member_message_notice"/>
+		<table tableName="t_member_secret_security" domainObjectName="MemberSecretSecurity" alias="temp_member_secret_security"/>
 	</context>
 </generatorConfiguration>  
