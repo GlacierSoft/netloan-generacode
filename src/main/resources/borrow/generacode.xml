@@ -49,10 +49,10 @@
 		<table tableName="t_overdue_notes" domainObjectName="OverdueNotes" alias="temp_overdue_notes"/>
 		<table tableName="t_receivables_notes" domainObjectName="ReceivablesNotes" alias="temp_receivables_notes"/>
 		<table tableName="t_receivables_notes_detail" domainObjectName="ReceivablesNotesDetail" alias="temp_receivables_notes_detail"/>
-		<table tableName="t_repayment_notes" domainObjectName="RepaymentNotes" alias="temp_repayment_notes"/>
+		<table tableName="t_repayment_notes" domainObjectName="RepaymentNotes" alias="temp_repayment_notes"/> 
 		<table tableName="t_repayment_notes_detail" domainObjectName="RepaymentNotesDetail" alias="temp_repayment_notes_detail"/>
 		<table tableName="t_repayment_type" domainObjectName="RepaymentType" alias="temp_repayment_type"/>
 		<table tableName="t_tender_notes" domainObjectName="TenderNotes" alias="temp_tender_notes"/>
-		<table tableName="t_tender_repayment" domainObjectName="TenderRepayment" alias="temp_tender_repayment"/>
+		<table tableName="t_tender_repayment" domainObjectName="TenderRepayment" alias="temp_tender_repayment"/> 
 	</context>
 </generatorConfiguration>  
