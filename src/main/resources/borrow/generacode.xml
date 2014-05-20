@@ -54,5 +54,6 @@
 		<table tableName="t_repayment_type" domainObjectName="RepaymentType" alias="temp_repayment_type"/>
 		<table tableName="t_tender_notes" domainObjectName="TenderNotes" alias="temp_tender_notes"/>
 		<table tableName="t_tender_repayment" domainObjectName="TenderRepayment" alias="temp_tender_repayment"/> 
+		<table tableName="t_attention_borrowing" domainObjectName="AttentionBorrowing" alias="temp_attention_borrowing"/> 
 	</context>
 </generatorConfiguration>  
