@@ -43,13 +43,12 @@
 		</javaClientGenerator>
 
 
-		<!-- <table tableName="t_finance_bank_card" domainObjectName="FinanceBankCard" alias="temp_finance_bank_card"/>
+		<table tableName="t_finance_bank_card" domainObjectName="FinanceBankCard" alias="temp_finance_bank_card"/>
 		<table tableName="t_finance_member" domainObjectName="FinanceMember" alias="temp_finance_member"/>
 		<table tableName="t_finance_recharge" domainObjectName="FinanceRecharge" alias="temp_finance_recharge"/>
 		<table tableName="t_finance_recharge_set" domainObjectName="FinanceRechargeSet" alias="temp_finance_recharge_set"/>
 		<table tableName="t_finance_transaction" domainObjectName="FinanceTransaction" alias="temp_finance_transaction"/>
 		<table tableName="t_finance_withdraw" domainObjectName="FinanceWithdraw" alias="temp_finance_withdraw"/>
-		 -->
 		<table tableName="t_finance_overdue_advances" domainObjectName="FinanceOverdueAdvances" alias="temp_finance_overdue_advances"/>
 		<table tableName="t_finance_overdue_advances_record" domainObjectName="FinanceOverdueAdvancesRecord" alias="temp_finance_overdue_advances_record"/>
 		<table tableName="t_finance_overdue_fine" domainObjectName="FinanceOverdueFine" alias="temp_finance_overdue_fine"/>
