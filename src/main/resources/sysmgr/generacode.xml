@@ -44,7 +44,7 @@
 
 
 		<table tableName="t_user" domainObjectName="User" alias="temp_user"/>
-		
+
 		<table tableName="t_user_setting" domainObjectName="UserSetting" alias="temp_user_setting"/>
 
 		<table tableName="t_user_role" domainObjectName="UserRole" alias="temp_user_role"/>
@@ -52,15 +52,15 @@
 		<table tableName="t_role" domainObjectName="Role" alias="temp_role"/>
 
 		<table tableName="t_menu" domainObjectName="Menu" alias="temp_menu"/>
-		
+
 		<table tableName="t_panel" domainObjectName="Panel" alias="temp_panel"/>
-		
+
 		<table tableName="t_action" domainObjectName="Action" alias="temp_action"/>
 
 		<table tableName="t_authority" domainObjectName="Authority" alias="temp_auth"/>
-		
+
 		<table tableName="t_operalog" domainObjectName="OperaLog" alias="temp_operalog"/>
 
 		<table tableName="t_loginlog" domainObjectName="LoginLog" alias="temp_loginlog"/>
 	</context>
-</generatorConfiguration>  
+</generatorConfiguration>
